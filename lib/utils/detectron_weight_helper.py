@@ -10,7 +10,7 @@ def load_detectron_weight(net, detectron_weight_file):
     name_mapping, orphan_in_detectron = net.detectron_weight_mapping
 
     with open(detectron_weight_file, 'rb') as fp:
-        src_blobs = pickle.load(fp, encoding='latin1')
+        src_blobs = pickle.load(fp) # , encoding='latin1')
     if 'blobs' in src_blobs:
         src_blobs = src_blobs['blobs']
 
