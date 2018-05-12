@@ -44,7 +44,7 @@ def get_func(func_name):
 
 class Generalized_RCNN(nn.Module):
     def __init__(self):
-        super().__init__()
+        super(Generalized_RCNN, self).__init__()
 
         # For cache
         self.mapping_to_detectron = None
